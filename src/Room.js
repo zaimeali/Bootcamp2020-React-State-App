@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
 
+import './Room.css';
+
 export const Room = () => {
 
     let [isLit, setLit] = useState(true);
 
     let [counter, setCounter] = useState(0);
+
+    // let [hello, setHello] = useState("Hello World");
 
     // console.log(useState(true));
 
@@ -19,7 +23,7 @@ export const Room = () => {
     }
 
     return (
-        <div>
+        <div className={ "room " + (isLit ? 'lit' : 'dark') }>
             <h2>Room is { isLit ? 'Lit' : 'Not Lit' }</h2>
             <button onClick={ updateLit }>Toggle Light</button>
 
